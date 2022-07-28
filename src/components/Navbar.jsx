@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import {
+  Link,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const Navbar = () => {
@@ -11,11 +17,55 @@ const Navbar = () => {
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl">BRAND.</h1>
           {/* NAV LINK LIST  */}
           <ul className="hidden md:flex">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platforms</li>
-            <li>Pricing</li>
+            <li>
+              <Link to="home" spy={true} smooth={true} duration={500}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="support"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                Support
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="platform"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Platform
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="pricing"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                Pricing
+              </Link>
+            </li>
           </ul>
         </div>
         {/* NAV LINK LIST  END*/}
@@ -34,11 +84,71 @@ const Navbar = () => {
       </div>
 
       <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
-        <li className="border-b-2 border-zinc-300 w-full">Home</li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => setNav(!nav)}
+          >
+            Home
+          </Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={() => setNav(!nav)}
+          >
+            About
+          </Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link
+            to="support"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+            onClick={() => setNav(!nav)}
+          >
+            Support
+          </Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link
+            to="platform"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={() => setNav(!nav)}
+          >
+            Platform
+          </Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link
+            to="pricing"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+            onClick={() => setNav(!nav)}
+          >
+            Pricing
+          </Link>
+        </li>
+
+        {/*  <li className="border-b-2 border-zinc-300 w-full">Home</li>
         <li className="border-b-2 border-zinc-300 w-full">About</li>
         <li className="border-b-2 border-zinc-300 w-full">Support</li>
         <li className="border-b-2 border-zinc-300 w-full">Platform</li>
-        <li className="border-b-2 border-zinc-300 w-full">Pricing</li>
+        <li className="border-b-2 border-zinc-300 w-full">Pricing</li> */}
         <div className="flex flex-col my-4">
           <button className="bg-transparent text-indigo-600 px-8 py-3 mb-4">
             SIgn In
