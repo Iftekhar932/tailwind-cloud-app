@@ -17,12 +17,12 @@ const Navbar = () => {
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl">BRAND.</h1>
           {/* NAV LINK LIST  */}
           <ul className="hidden md:flex">
-            <li>
+            <li className="cursor-pointer">
               <Link to="home" spy={true} smooth={true} duration={500}>
                 Home
               </Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link
                 to="about"
                 spy={true}
@@ -33,7 +33,7 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link
                 to="support"
                 spy={true}
@@ -44,7 +44,7 @@ const Navbar = () => {
                 Support
               </Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link
                 to="platform"
                 spy={true}
@@ -55,7 +55,7 @@ const Navbar = () => {
                 Platform
               </Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link
                 to="pricing"
                 spy={true}
@@ -84,7 +84,7 @@ const Navbar = () => {
       </div>
 
       <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
-        <li className="border-b-2 border-zinc-300 w-full">
+        <li className="border-b-2 border-zinc-300 w-full cursor-pointer">
           <Link
             to="home"
             spy={true}
@@ -95,7 +95,7 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        <li className="border-b-2 border-zinc-300 w-full">
+        <li className="border-b-2 border-zinc-300 w-full cursor-pointer">
           <Link
             to="about"
             spy={true}
@@ -107,7 +107,7 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className="border-b-2 border-zinc-300 w-full">
+        <li className="border-b-2 border-zinc-300 w-full cursor-pointer">
           <Link
             to="support"
             spy={true}
@@ -119,7 +119,7 @@ const Navbar = () => {
             Support
           </Link>
         </li>
-        <li className="border-b-2 border-zinc-300 w-full">
+        <li className="border-b-2 border-zinc-300 w-full cursor-pointer">
           <Link
             to="platform"
             spy={true}
@@ -131,7 +131,7 @@ const Navbar = () => {
             Platform
           </Link>
         </li>
-        <li className="border-b-2 border-zinc-300 w-full">
+        <li className="border-b-2 border-zinc-300 w-full cursor-pointer">
           <Link
             to="pricing"
             spy={true}
